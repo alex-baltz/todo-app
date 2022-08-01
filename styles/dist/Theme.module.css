@@ -1,0 +1,27 @@
+.headerTask {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.headerTask h1,
+.headerTask .themeBox {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+}
+.headerTask .themeBox {
+  justify-content: flex-end;
+}
+.headerTask .themeBox .icon {
+  color: #fff;
+  cursor: pointer;
+}
+.headerTask .themeBox .icon:hover {
+  color: rgba(255, 255, 255, 0.857);
+  animation: circle 1s forwards;
+}
+.headerTask .themeBox .icon:active {
+  transform: scale(0.8);
+}

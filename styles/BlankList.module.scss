@@ -1,0 +1,48 @@
+@import "utils/_theme.scss";
+
+.blankListContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 1.5em;
+    padding: 40px 20px;
+    width: 100%;
+    border-radius: 10px;
+
+    background-color: $LightBlack;
+
+    &.light {
+        background-color: $White;
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.05);
+    }
+
+    transition: 500ms ease;
+
+    .title {
+        font-size: 20px;
+        margin-bottom: 12px;
+        color: $White;
+
+        &.light {
+            color: $LightBlack;
+        }
+    }
+
+    .description {
+        font-size: 0.9rem;
+        color: $White;
+
+        &.light {
+            color: $LightBlack;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .blankListContainer {
+        padding: 20px 10px;
+    }
+
+}

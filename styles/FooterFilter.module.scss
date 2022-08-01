@@ -1,0 +1,128 @@
+@import "utils/_theme.scss";
+
+.filterContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  background-color: $LightBlack;
+  border-top: 1px solid $LightGray;
+  padding: 20px;
+
+  &.light {
+    background-color: $White;
+    box-shadow: 0px 0px 10px $LightGray;
+  }
+
+  .countList {
+    flex-basis: 25%;
+    font-size: 14px;
+
+    &.light {
+      span {
+        color: $Black;
+      }
+    }
+
+    span {
+      color: $White;
+    }
+  }
+
+  .filterItems {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-basis: 45%;
+
+    &.light {
+      button {
+        color: $Black;
+
+        &:hover {
+          color: $LightGray;
+        }
+      }
+    }
+
+    button {
+      font-size: 14px;
+      display: block;
+      background-color: transparent;
+      border: none;
+      color: $White;
+      font-weight: 700;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 2em;
+      }
+
+      &:hover {
+        color: $FaintBlack;
+      }
+
+      &.active {
+        color: #00aced;
+      }
+    }
+  }
+
+  .clearItems {
+    flex-basis: 30%;
+    color: $White;
+
+    &.light {
+      button {
+        color: $Black;
+
+        &:hover {
+          color: $LightGray;
+        }
+      }
+    }
+
+    button {
+      font-size: 14px;
+      display: block;
+      background-color: transparent;
+      border: none;
+      color: $White;
+      font-weight: 700;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .filterContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+
+    .countList,
+    .clearItems {
+      display: flex;
+
+      flex-basis: 50%;
+      align-items: center;
+      margin: 10px 0px;
+    }
+    .countList {
+      order: 0;
+      justify-content: flex-start;
+    }
+    .clearItems {
+      order: 1;
+      justify-content: flex-end;
+    }
+    .filterItems {
+      order: 3;
+      justify-content: center;
+      gap: 20px;
+      flex-basis: 100%;
+    }
+  }
+}

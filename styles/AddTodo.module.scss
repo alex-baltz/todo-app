@@ -1,0 +1,46 @@
+@import "utils/_theme.scss";
+
+.todoFormContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;      
+    margin-top: 1.5em;
+    border-radius: 6px;
+    transition: 500ms ease;
+    background-color: $LightBlack;  
+    &.light {
+        background-color: $White;
+    }
+
+    
+
+    .circle {
+        display: inline;           
+        width: 20px;
+        height: 20px;
+        margin-right: 20px;
+        background-color: transparent;
+        border: 1px solid $LightGray;
+        &.light {
+            border: 1px solid $LightBlack;
+        }
+        border-radius: 150px;
+        cursor: pointer;
+    }
+
+    input[type="text"] {
+        display: inline;
+        width: 80%;
+        background-color: transparent;
+        color: $White;
+        &.light {
+            color: $LightBlack;
+        }
+        border: none;
+        font-family: 'Josefin Sans', sans-serif;
+        padding: 1.5em 0em;
+        outline: none;
+    }
+
+}
